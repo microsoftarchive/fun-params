@@ -90,7 +90,7 @@
     - https://github.com/thi-ng/validate
     - https://github.com/jkk/formative
    "
-   (:require [api-controller.response.errors :as errors]
+   (:require [fun-params.errors :as errors]
              [clojure.set :refer [union]]))
 
 (defn get-param
