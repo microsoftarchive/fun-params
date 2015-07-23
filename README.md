@@ -34,6 +34,7 @@ The main ideas in fun-params are:
 
 ```clojure
 (require ['fun-params.core :as p])
+
 (def valid-name (p/string :name))
 ```
 
@@ -120,7 +121,8 @@ Compose-validators: `optional`, `non-empty` (no extras), `replace-nil` and `wrap
   - `[valid-1-fn valid-2-fn]`
   - `[req valid-1-fn valid-2-fn success-fn]`
 
-Implementation Details:
+
+### Implementation Details:
 
 fun-params uses some Clojure magic by attaching metadata to the validator functions.
 When composing functions, this metadata is used to determine which parameter
