@@ -1,7 +1,7 @@
 (ns fun-params.middleware
   (:require [clojure.data.json :as json]))
 
-(defn passthrough-error-as-json
+(defn wrap-passthrough-error-as-json
   [handler]
   (fn [req]
     (let [response (handler req)]
